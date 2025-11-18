@@ -1,0 +1,6 @@
+id=rmpifprops_singleuse
+name=RmPIFProps - Single-use Magisk module
+version=v1.0
+versionCode=1
+author=Astoritin
+description=A single-use Magisk module to remove system properties of PiHooks/PixelProps/PlayIntegrityFix inbuilt by insane custom ROM.

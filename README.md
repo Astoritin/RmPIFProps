@@ -1,10 +1,9 @@
 ## RmPIFProps Single-use | 移除PIF相关属性值 - 一次性模块
 A single-use Magisk module to remove PiHooks/PixelProps/PlayIntegrityFix related properties in some insane(non-standard development) custom AOSP based ROMs.   
 为部分有病(开发不规范)的基于AOSP的自定义ROM移除PiHooks/PixelProps/PlayIntegrityFix相关的属性值的一次性Magisk模块。   
-   
+#### Tips | 提示
 If you are looking for similar module can keep removing properties on each time boot, see [RmProps](https://github.com/Astoritin/RmProps/).   
-如果你需要能在每次启动时移除属性值的模块，参阅[RmProps](https://github.com/Astoritin/RmProps/)。   
-
+如果你需要能在每次启动时移除属性值的模块，参阅[RmProps](https://github.com/Astoritin/RmProps/)。
 ### Why this module exists? | 为什么存在这个模块?
 Its existence is tied to a common story in the custom ROM scene: a well-intentioned effort that often backfires. Some custom ROMs, aiming to help users pass Play Integrity checks (e.g. for using banking apps), began directly integrating spoofing components like PlayIntegrityFix, PixelProps, or modified versions of TrickyStore into the system itself. While the goal was user convenience, the execution was flawed:
 - Enabled by default, cannot be disabled: Users were given no choice.

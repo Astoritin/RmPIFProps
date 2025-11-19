@@ -23,3 +23,12 @@ It's specifically designed to remove those invalid property values (PiHooks/Pixe
 简单来说，这个模块是一个 “清理工具”。   
 它专门用于处理那些被 ROM 强行写入、又无法自行清除的 PiHooks/PixelProps/PlayIntegrityFix 相关的无效属性值。尤其是在 Play Integrity API更新并生效后，原先的组件可能已经失效，但它们留下的“脚印”却还在——这个模块就是来帮你擦掉这些脚印的。   
    
+## A Call for Better Practices | 我想呼吁什么？
+
+我理解 ROM 开发者想为用户提供便利的心情，但实现方式真的非常重要。
+
+像 Magisk 模块这样用户可控制、可卸载、可更新的方案，显然是更友好、更可持续的道路。
+
+而将功能强行固化进系统，不仅剥夺了用户的选择权，还可能因为实现不干净，导致整个 ROM 及其用户被各类应用“重点关照”，恶化大家的日用环境。
+
+因此，这个模块是一个应对当前困境的临时方案。从长远来看，我更希望开发者们能选择更透明、更尊重用户控制权的实现方式，这才是对自定义ROM生态真正的负责与贡献。

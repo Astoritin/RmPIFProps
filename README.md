@@ -1,10 +1,7 @@
 ## RmPIFProps Single-use | 移除PIF相关属性值 - 一次性模块
-   
 A single-use Magisk module to remove PiHooks/PixelProps/PlayIntegrityFix related properties in some insane(non-standard development) custom AOSP based ROMs.   
 为部分有病(开发不规范)的基于AOSP的自定义ROM移除PiHooks/PixelProps/PlayIntegrityFix相关的属性值的一次性Magisk模块。
-   
 ## Why this module exists? | 为什么存在这个模块?
-   
 Its existence is tied to a common story in the custom ROM scene: a well-intentioned effort that often backfires. Some custom ROMs, aiming to help users pass Play Integrity checks (e.g. for using banking apps), began directly integrating spoofing components like PlayIntegrityFix, PixelProps, or modified versions of TrickyStore into the system itself. While the goal was user convenience, the execution was flawed:
 - Enabled by default, cannot be disabled: Users were given no choice.
 - Cannot be uninstalled, leaves traces: These components modify system properties, leaving behind fingerprints that are never present on stock ROMs.
@@ -14,21 +11,15 @@ Its existence is tied to a common story in the custom ROM scene: a well-intentio
 - 默认开启，无法关闭：用户没有选择权
 - 无法卸载，痕迹残留：这些组件会修改系统属性，留下本不属于原厂系统的特征
 - 实现不干净，反而暴露自己：这些特征如今反而成了某些 App 检测“非官方系统”的依据之一
-   
 ## What does this module do? | 这个模块是干什么的？
-   
 In short, it's a cleanup tool.   
 It's specifically designed to remove those invalid property values (PiHooks/PixelProps/PlayIntegrityFix related) that were forcibly written by the ROM and cannot be cleared otherwise. Especially after Play Integrity rule/API updates, the original integrated components often become obsolete, but their "footprints" remain. This module helps erase those footprints.   
-   
 **This module is a one-time execution module and will not persist in your system. After flashing, a reboot is highly recommended to clear any potential "Property modified (10)" errors that may occur due to the property partition being modified by resetprop.**
 ---
 简单来说，这个模块是一个 “清理工具”。   
 它专门用于处理那些被 ROM 强行写入、又无法自行清除的 PiHooks/PixelProps/PlayIntegrityFix 相关的无效属性值。尤其是在 Play Integrity API更新并生效后，原先的组件可能已经失效，但它们留下的“脚印”却还在——这个模块就是来帮你擦掉这些脚印的。   
-   
 **这个模块是一次性使用模块，不会在系统中保留。建议刷入后重新启动一次，以避免由于property区被resetprop修改导致的 Property modified (10)。**
-
 ## A Call for Better Practices | 姑且呼吁一些东西
-   
 I understand that ROM developers want to provide convenience, but the "how" is crucial.   
 Solutions like Magisk modules, which are user-controllable, removable, and updatable, represent a more respectful and sustainable path.   
 Forcing features deep into the system not only strips users of control but also, due to often messy implementations, risks getting the entire ROM and its users flagged by apps, worsening the environment for everyone.   
@@ -37,10 +28,8 @@ In the long run, I hope ROM developers will adopt more transparent methods that 
 我理解 ROM 开发者想为用户提供便利的心情，但实现方式真的非常重要。   
 像 Magisk 模块这样用户可控制、可卸载、可更新的方案，显然是更友好、更可持续的道路。   
 而将功能强行固化进系统，不仅剥夺了用户的选择权，还可能因为实现不干净，导致整个 ROM 及其用户被各类应用“重点关照”，恶化大家的日用环境。   
-从长远来看，我更希望ROM开发者们能选择更透明、更尊重用户控制权的实现方式，这才是对自定义ROM生态真正的负责与贡献。   
-
+从长远来看，我更希望ROM开发者们能选择更透明、更尊重用户控制权的实现方式，这才是对自定义ROM生态真正的负责与贡献。
 ## Credits | 鸣谢
-   
 - [Magisk](https://github.com/topjohnwu/Magisk) - the foundation which makes everything possible | 让一切成为可能的基石
 - [LSPosed](https://github.com/LSPosed/LSPosed) - the implementation of function root solution check | Root方案检测函数的实现
 - [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) - the implementation of function root solution check | Root方案检测函数的实现
